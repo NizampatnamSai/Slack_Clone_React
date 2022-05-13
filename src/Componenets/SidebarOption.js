@@ -8,6 +8,7 @@ import { enterRoom } from '../features/appSlice'
 
 
 function SidebarOption({Icon, title,addChannelOption,id}) {
+    // console.log(id)
 
    const dispatch=useDispatch();
 
@@ -27,6 +28,7 @@ function SidebarOption({Icon, title,addChannelOption,id}) {
 
     const SelectChannel=()=>{
         if(id){
+            console.log(id)
  dispatch(enterRoom({
      roomId:id
  }))
