@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function Message({message,user,timestamp,userImage}) {
   return (
     <MessageContainer>
-      <img src={userImage} alt=''logo of user/>
+      <img src={userImage} alt='logo of user'/>
 
 
       <MessageInfo>
@@ -30,7 +30,7 @@ align-items:center;
 padding:20px;
 
 >img {
-    heigt:50px;
+    height:40px;
     border-radius:8px
 }
 

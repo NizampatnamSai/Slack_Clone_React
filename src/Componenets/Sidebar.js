@@ -15,6 +15,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import AddIcon from '@material-ui/icons/Add'
 import {useCollection} from 'react-firebase-hooks/firestore'
 import { auth, db } from '../Firebase'
+import { useAuthState } from 'react-firebase-hooks/auth'
 
 
 
@@ -23,6 +24,7 @@ import { auth, db } from '../Firebase'
 
 function Sidebar() {
   const [channels, loading,error]=useCollection(db.collection('rooms'));
+  const [user]=useAuthState(auth)
 
   return (
     <SidebarContainer>
